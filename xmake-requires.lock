@@ -1,0 +1,39 @@
+{
+    __meta__ = {
+        version = "1.0"
+    },
+    ["windows|x64"] = {
+        ["cmake#31fecfc4"] = {
+            repo = {
+                branch = "master",
+                commit = "537a3899537eff8285e553d307e635ebee349e9f",
+                url = "https://gitlab.com/tboox/xmake-repo.git"
+            },
+            version = "4.0.0"
+        },
+        ["simpleini#31fecfc4"] = {
+            repo = {
+                branch = "master",
+                commit = "53d63a76db5900aff2dd1c38b20e7bea351c85f0",
+                url = "https://gitlab.com/tboox/xmake-repo.git"
+            },
+            version = "v4.22"
+        },
+        ["spdlog#9c36f0a9"] = {
+            repo = {
+                branch = "master",
+                commit = "537a3899537eff8285e553d307e635ebee349e9f",
+                url = "https://gitlab.com/tboox/xmake-repo.git"
+            },
+            version = "v1.15.3"
+        },
+        ["xbyak#31fecfc4"] = {
+            repo = {
+                branch = "master",
+                commit = "7b8966425e358cfca95573eb354be187b04c6f57",
+                url = "https://gitlab.com/tboox/xmake-repo.git"
+            },
+            version = "v7.06"
+        }
+    }
+}
