@@ -81,7 +81,7 @@ namespace EscapeFreeze
 		};
 	};
 
-	void Install()
+	inline bool Install()
 	{
 		auto& trampoline = REL::GetTrampoline();
 		for (const auto& pair : addresses)
@@ -116,5 +116,7 @@ namespace EscapeFreeze
 		{
 			REX::INFO("Escape Freeze: {:x}", reinterpret_cast<uintptr_t>(spinlock));
 		}
+
+		return true;
 	}
 }

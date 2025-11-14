@@ -6,8 +6,12 @@ includes("lib/commonlibf4")
 
 -- set project
 set_project("EscapeFreezeNG")
-set_version("1.0.0")
 set_license("GPL-3.0")
+
+-- project version
+local version = "1.1.0"
+local major, minor, patch = version:match("^(%d+)%.(%d+)%.(%d+)$")
+set_version(version)
 
 -- set defaults
 set_languages("c++23")
@@ -33,7 +37,7 @@ target("EscapeFreezeNG")
     add_rules("commonlibf4.plugin", {
         name = "EscapeFreezeNG",
         author = "TheGamerX20",
-        description = "Escape Condition Locks in FO4 NG!"
+        description = "Escape Condition Locks in FO4 NG & AE!"
     })
 
     -- add src files
@@ -41,3 +45,10 @@ target("EscapeFreezeNG")
     add_headerfiles("src/**.h")
     add_includedirs("src")
     set_pcxxheader("src/pch.h")
+
+    -- pass major version
+    add_defines(
+        "PLUGIN_VERSION_MAJOR=" .. major,
+        "PLUGIN_VERSION_MINOR=" .. minor,
+        "PLUGIN_VERSION_PATCH=" .. patch
+    )

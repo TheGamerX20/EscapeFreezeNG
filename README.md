@@ -1,6 +1,7 @@
 # Escape Freeze NG
 
-Buffout 4 NG's Escape Freeze Patch ported to FO4 1.10.984.0.
+Buffout 4 NG's Escape Freeze Patch ported to FO4 1.10.984.0+.
+Supports both the Next-Gen and Anniversary Editions of the Game.
 
 ### Requirements
 * [XMake](https://xmake.io) [2.8.2+]

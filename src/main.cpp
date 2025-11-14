@@ -26,11 +26,13 @@ namespace Main
         // Install Escape Freeze
         if (iEscapeFreezePatch.GetValue() == true)
         {
-            EscapeFreeze::Install();
+            if (EscapeFreeze::Install())
+            {
+                REX::INFO("Escape Freeze NG Initialized!");
+            }
         }
 
         // Finished
-        REX::INFO("Escape Freeze NG Initialized!");
         return true;
     }
 }
