@@ -2,11 +2,13 @@
 
 // Patches
 #include <EscapeFreeze.h>
+#include <FreezeWatcher.h>
 
 namespace Main
 {
     // Config Options
     static REX::INI::Bool iEscapeFreezePatch{ "Patches"sv, "EnableEscapeFreezePatch"sv, true };
+    static REX::INI::Bool iFreezeWatcherPatch{ "Patches"sv, "EnableFreezeWatcherPatch"sv, true };
 
     F4SE_PLUGIN_PRELOAD(const F4SE::LoadInterface* a_f4se)
     {
@@ -28,11 +30,21 @@ namespace Main
         {
             if (EscapeFreeze::Install())
             {
-                REX::INFO("Escape Freeze NG Initialized!");
+                REX::INFO("Escape Freeze Patch Initialized!");
+            }
+        }
+
+        // Install Freeze Watcher
+        if (iFreezeWatcherPatch.GetValue() == true)
+        {
+            if (FreezeWatcher::Install())
+            {
+                REX::INFO("Freeze Watcher Patch Initialized!");
             }
         }
 
         // Finished
+        REX::INFO("Escape Freeze NG Initialized!");
         return true;
     }
 }
