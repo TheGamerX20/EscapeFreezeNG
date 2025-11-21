@@ -9,7 +9,7 @@ set_project("EscapeFreezeNG")
 set_license("GPL-3.0")
 
 -- project version
-local version = "1.1.0"
+local version = "1.2.0"
 local major, minor, patch = version:match("^(%d+)%.(%d+)%.(%d+)$")
 set_version(version)
 
