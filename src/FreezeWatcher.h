@@ -11,8 +11,7 @@ namespace FreezeWatcher
 
 	// Relocation IDs
 	// NG 1.10.984.0: 2692050
-	// AE 1.11.137.0: 4799342
-	// AE 1.11.159.0: ?
+	// AE 1.11.137.0+: 4799342
 	REL::Relocation<int*> ConditionLockCountPointer{ REL::ID(4799342) };
 	
 	static void FreezeWatcherThread()
